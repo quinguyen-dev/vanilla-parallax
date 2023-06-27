@@ -1,0 +1,54 @@
+@use "./settings/index" as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    background-color: $background-color;
+    height: 100vh;
+
+    padding: 48px;
+}
+
+#app {
+    background: $hero-gradient-background;
+}
+
+#hero:before {
+    background: linear-gradient(to top, #1c0522, transparent);
+
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+
+    z-index: 10;
+}
+
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        height: 100%;
+        width: 100%;
+
+        object-fit: cover;
+    }
+}
+
+#moon {
+    mix-blend-mode: screen;
+}
